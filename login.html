@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Login - CineVerse AI</title>
+
+<title>CineVerse AI Login</title>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<div class="form-container">
+<div class="loginbox">
 
-<h2>Login</h2>
+<h2>Studio Login</h2>
 
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
+<input id="username" placeholder="Username">
 
-<button>Login</button>
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="msg"></p>
 
 <p>New user? <a href="signup.html">Create account</a></p>
 
 </div>
 
+<script>
+
+function login(){
+
+var u=document.getElementById("username").value;
+var p=document.getElementById("password").value;
+
+if(u=="cineverse" && p=="1234"){
+
+window.location="index.html";
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML="Invalid login";
+
+}
+
+}
+
+</script>
+
 </body>
+
 </html>
