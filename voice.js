@@ -1,34 +1,44 @@
-let recorder;
+let mediaRecorder;
 let audioChunks=[];
 
-async function startRecording(){
+function startRec(){
 
-let stream = await navigator.mediaDevices.getUserMedia({audio:true});
+navigator.mediaDevices.getUserMedia({audio:true})
 
-recorder = new MediaRecorder(stream);
+.then(stream=>{
 
-recorder.start();
+mediaRecorder=new MediaRecorder(stream);
 
-recorder.ondataavailable = e=>{
+mediaRecorder.start();
+
+document.getElementById("recstatus").innerHTML="Recording...";
+
+mediaRecorder.ondataavailable=e=>{
+
 audioChunks.push(e.data);
-}
 
-}
+};
 
-function stopRecording(){
+mediaRecorder.onstop=e=>{
 
-recorder.stop();
+let blob=new Blob(audioChunks,{type:"audio/mp3"});
 
-recorder.onstop = e=>{
+let url=URL.createObjectURL(blob);
 
-let blob = new Blob(audioChunks);
-
-let audioURL = URL.createObjectURL(blob);
-
-document.getElementById("audioPlayback").src = audioURL;
+document.getElementById("audioPlayback").src=url;
 
 audioChunks=[];
 
+};
+
+});
+
 }
+
+function stopRec(){
+
+mediaRecorder.stop();
+
+document.getElementById("recstatus").innerHTML="Recording Stopped";
 
 }
