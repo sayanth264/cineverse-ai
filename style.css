@@ -1,66 +1,84 @@
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#0f172a;
 color:white;
+text-align:center;
 }
 
 header{
+background:#020617;
+padding:20px;
 display:flex;
 justify-content:space-between;
-padding:20px;
-background:#020617;
+align-items:center;
 }
 
 nav a{
-margin:10px;
 color:white;
+margin:10px;
 text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-text-align:center;
-padding:100px;
+padding:100px 20px;
 }
 
 .hero h2{
 font-size:40px;
 }
 
-button{
-padding:10px 20px;
-background:#6366f1;
+.mainbtn{
+padding:12px 25px;
+font-size:16px;
+background:#38bdf8;
 border:none;
-color:white;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
 }
 
 .features{
 display:flex;
 justify-content:center;
-gap:30px;
-padding:50px;
+flex-wrap:wrap;
 }
 
 .card{
 background:#1e293b;
-padding:30px;
-border-radius:10px;
+padding:20px;
+margin:20px;
 width:250px;
+border-radius:10px;
 }
 
-.form-container{
+button{
+padding:10px 20px;
+margin:10px;
+border:none;
+border-radius:6px;
+background:#38bdf8;
+cursor:pointer;
+}
+
+.loginbox{
+background:#1e293b;
 width:300px;
-margin:auto;
-margin-top:100px;
-display:flex;
-flex-direction:column;
-gap:10px;
+padding:40px;
+margin:100px auto;
+border-radius:10px;
 }
 
 input{
+width:90%;
 padding:10px;
-border-radius:5px;
+margin:10px;
 border:none;
+border-radius:5px;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+background:#020617;
 }
