@@ -1,55 +1,23 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<title>CineVerse AI Login</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-
-<div class="loginbox">
-
-<h2>Studio Login</h2>
-
-<input id="username" placeholder="Username">
-
-<input id="password" type="password" placeholder="Password">
-
-<button onclick="login()">Login</button>
-
-<p id="msg"></p>
-
-<p>New user? <a href="signup.html">Create account</a></p>
-
-</div>
-
 <script>
 
 function login(){
 
-var u=document.getElementById("username").value;
-var p=document.getElementById("password").value;
+let u=document.getElementById("username").value;
+let p=document.getElementById("password").value;
 
-if(u=="cineverse" && p=="1234"){
+let storedPass=localStorage.getItem(u);
+
+if(storedPass==p){
 
 window.location="index.html";
 
 }
-
 else{
 
-document.getElementById("msg").innerHTML="Invalid login";
+document.getElementById("msg").innerHTML="Invalid username or password";
 
 }
 
 }
 
 </script>
-
-</body>
-
-</html>
