@@ -2,47 +2,41 @@
 <html>
 
 <head>
-<title>CineVerse AI Login</title>
+
+<title>Signup</title>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <div class="loginbox">
 
-<h2>Studio Login</h2>
+<h2>Create Account</h2>
 
-<input id="username" placeholder="Username">
+<input id="newuser" placeholder="Username">
 
-<input id="password" type="password" placeholder="Password">
+<input id="newpass" type="password" placeholder="Password">
 
-<button onclick="login()">Login</button>
+<button onclick="signup()">Create Account</button>
 
 <p id="msg"></p>
 
-<p>New user? <a href="signup.html">Create account</a></p>
+<p><a href="login.html">Back to Login</a></p>
 
 </div>
 
 <script>
 
-function login(){
+function signup(){
 
-let username = document.getElementById("username").value;
-let password = document.getElementById("password").value;
+let username=document.getElementById("newuser").value;
+let password=document.getElementById("newpass").value;
 
-let storedPassword = localStorage.getItem(username);
+localStorage.setItem(username,password);
 
-if(storedPassword === password){
-
-window.location.href = "dashboard.html";
-
-}
-else{
-
-document.getElementById("msg").innerHTML="Invalid username or password";
-
-}
+document.getElementById("msg").innerHTML="Account created!";
 
 }
 
