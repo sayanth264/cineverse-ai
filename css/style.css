@@ -1,10 +1,12 @@
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 background:#0f172a;
 color:white;
 text-align:center;
 }
+
+/* HEADER */
 
 header{
 background:#020617;
@@ -14,6 +16,10 @@ justify-content:space-between;
 align-items:center;
 }
 
+header h1{
+margin:0;
+}
+
 nav a{
 color:white;
 margin:10px;
@@ -21,12 +27,24 @@ text-decoration:none;
 font-weight:bold;
 }
 
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO SECTION */
+
 .hero{
 padding:100px 20px;
 }
 
 .hero h2{
 font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
 }
 
 .mainbtn{
@@ -38,19 +56,29 @@ border-radius:8px;
 cursor:pointer;
 }
 
+.mainbtn:hover{
+background:#0ea5e9;
+}
+
+/* FEATURES */
+
 .features{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
+margin-top:40px;
 }
 
 .card{
 background:#1e293b;
-padding:20px;
+padding:25px;
 margin:20px;
-width:250px;
-border-radius:10px;
+width:260px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
+
+/* BUTTON */
 
 button{
 padding:10px 20px;
@@ -59,23 +87,42 @@ border:none;
 border-radius:6px;
 background:#38bdf8;
 cursor:pointer;
+font-weight:bold;
 }
+
+button:hover{
+background:#0ea5e9;
+}
+
+/* LOGIN BOX */
 
 .loginbox{
 background:#1e293b;
 width:300px;
 padding:40px;
-margin:100px auto;
-border-radius:10px;
+margin:120px auto;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
+
+/* INPUT */
 
 input{
 width:90%;
 padding:10px;
 margin:10px;
 border:none;
-border-radius:5px;
+border-radius:6px;
 }
+
+/* AUDIO PLAYER SMALL */
+
+audio{
+width:160px;
+margin-top:10px;
+}
+
+/* FOOTER */
 
 footer{
 margin-top:50px;
