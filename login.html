@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Signup</title>
+<title>Login</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -13,52 +13,43 @@
 
 <div class="loginbox">
 
-<h2>Create Account</h2>
+<h2>Studio Login</h2>
 
-<input id="newuser" placeholder="Username">
+<input id="username" placeholder="Username">
 
-<input id="newpass" type="password" placeholder="Password">
+<input id="password" type="password" placeholder="Password">
 
-<button onclick="signup()">Create Account</button>
+<button onclick="login()">Login</button>
 
 <p id="msg"></p>
 
-<p><a href="login.html">Back to Login</a></p>
+<p><a href="signup.html">Create Account</a></p>
 
 </div>
 
 <script>
 
-function signup(){
+function login(){
 
-let username=document.getElementById("newuser").value;
-let password=document.getElementById("newpass").value;
+let username=document.getElementById("username").value
+let password=document.getElementById("password").value
 
-localStorage.setItem(username,password);
-
-document.getElementById("msg").innerHTML="Account created!";
-
-}
-  function login(){
-
-let username=document.getElementById("username").value;
-let password=document.getElementById("password").value;
-
-let storedPassword=localStorage.getItem(username);
+let storedPassword=localStorage.getItem(username)
 
 if(storedPassword===password){
 
-localStorage.setItem("loggedin","true");
+localStorage.setItem("loggedin","true")
 
-window.location.href="dashboard.html";
+window.location.href="dashboard.html"
 
 }
 else{
 
-document.getElementById("msg").innerHTML="Invalid login";
+document.getElementById("msg").innerHTML="Invalid login"
 
 }
-    
+
+}
 
 </script>
 
