@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Signup</title>
+<title>CineVerse AI Signup</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,6 +13,7 @@
 <h2>Create Account</h2>
 
 <input id="newuser" placeholder="Username">
+
 <input id="newpass" type="password" placeholder="Password">
 
 <button onclick="signup()">Create Account</button>
@@ -27,16 +28,22 @@
 
 function signup(){
 
-let u=document.getElementById("newuser").value;
-let p=document.getElementById("newpass").value;
+let username=document.getElementById("newuser").value;
+let password=document.getElementById("newpass").value;
 
-localStorage.setItem(u,p);
+if(username=="" || password==""){
+document.getElementById("msg").innerHTML="Enter username and password";
+return;
+}
 
-document.getElementById("msg").innerHTML="Account Created!";
+localStorage.setItem(username,password);
+
+document.getElementById("msg").innerHTML="Account created! Now login.";
 
 }
 
 </script>
 
 </body>
+
 </html>
