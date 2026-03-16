@@ -1,25 +1,35 @@
 body{
 margin:0;
 font-family:Segoe UI;
-background:linear-gradient(135deg,#0f172a,#020617);
-color:white;
+background:#ffffff;
+color:#36454F; /* charcoal text */
 text-align:center;
 }
+
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
-background:#020617;
+background:#ffffff;
+border-bottom:2px solid #f0f0f0;
 }
 
 nav a{
 margin:10px;
-color:#8b5cf6;
+color:#36454F;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
 }
+
+nav a:hover{
+color:#800020; /* burgundy */
+}
+
+/* HERO */
 
 .hero{
 padding:120px 20px;
@@ -27,12 +37,19 @@ padding:120px 20px;
 
 .mainbtn{
 padding:15px 35px;
-background:#8b5cf6;
+background:#800020; /* burgundy */
 border:none;
 border-radius:10px;
 color:white;
+font-size:16px;
 cursor:pointer;
 }
+
+.mainbtn:hover{
+background:#660018;
+}
+
+/* FEATURES */
 
 .features{
 display:flex;
@@ -42,38 +59,61 @@ gap:25px;
 margin-top:40px;
 }
 
+/* CARDS */
+
 .card{
-background:#1e293b;
+background:#ffffff;
 padding:25px;
 width:260px;
 border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* BUTTONS */
 
 button{
 padding:10px 20px;
-background:#8b5cf6;
+background:#800020; /* burgundy */
 border:none;
 border-radius:8px;
 color:white;
 cursor:pointer;
+margin:5px;
 }
 
+button:hover{
+background:#660018;
+}
+
+/* LOGIN BOX */
+
 .loginbox{
-background:#1e293b;
+background:#ffffff;
 width:320px;
 padding:40px;
 margin:120px auto;
 border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
+
+/* INPUT */
 
 input{
 width:90%;
 padding:10px;
 margin:10px;
-border:none;
+border:1px solid #ddd;
 border-radius:6px;
+color:#36454F;
 }
+
+/* AUDIO PLAYER */
 
 audio{
 width:150px;
