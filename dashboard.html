@@ -3,7 +3,7 @@
 
 <head>
 
-<title>CineVerse AI Studio</title>
+<title>CineVerse Studio</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -11,23 +11,29 @@
 
 <body>
 
+<script>
+
+if(!localStorage.getItem("loggedin")){
+window.location.href="login.html";
+}
+
+</script>
+
 <header>
 
 <h1>🎬 CineVerse AI Studio</h1>
 
+<button onclick="logout()">Logout</button>
+
 </header>
 
-<div class="container">
-
-<h2>Welcome Creator 🚀</h2>
-
-<p>Use AI tools to create films and music.</p>
+<div class="features">
 
 <div class="card">
 
-<h3>🎼 Music Idea Generator</h3>
+<h3>💡 Song Idea Generator</h3>
 
-<button onclick="idea()">Generate Idea</button>
+<button onclick="idea()">Generate</button>
 
 <p id="idea"></p>
 
@@ -56,22 +62,56 @@
 
 </div>
 
+<div class="card">
+
+<h3>🎬 Script Generator</h3>
+
+<button onclick="scriptIdea()">Generate</button>
+
+<p id="script"></p>
+
+</div>
+
+<div class="card">
+
+<h3>🎵 Chord Generator</h3>
+
+<button onclick="chords()">Generate</button>
+
+<p id="chord"></p>
+
+</div>
+
 </div>
 
 <script src="js/voice.js"></script>
 
 <script>
 
+function logout(){
+
+localStorage.removeItem("loggedin");
+
+window.location.href="login.html";
+
+}
+
 function idea(){
 
 let ideas=[
-"Romantic rain song",
-"Hero intro background music",
-"Sad piano theme",
-"Festival dance beat"
+"Romantic rain love song",
+"Hero intro movie music",
+"Lo-fi night music",
+"Sad piano melody",
+"Festival dance beat",
+"Workout motivation song",
+"Village folk music",
+"Sci-fi movie soundtrack",
+"Travel vlog background music",
+"Friendship celebration song"
 ];
 
-document.getElementById("idea").innerHTML =
+document.getElementById("idea").innerHTML=
 ideas[Math.floor(Math.random()*ideas.length)];
 
 }
@@ -80,13 +120,46 @@ function lyrics(){
 
 let lines=[
 "Under the silver moon we sing",
-"Your voice echoes in my heart",
-"Dancing lights in midnight sky",
-"A melody that never fades"
+"Your voice echoes through the night",
+"Dreams dancing in the sky",
+"A melody born from the heart",
+"Stars listening to our song",
+"The rhythm flowing like a river",
+"Every note tells a story",
+"Music carries our emotions",
+"Together we create magic",
+"And the song lives forever"
 ];
 
-document.getElementById("lyrics").innerHTML =
-lines[Math.floor(Math.random()*lines.length)];
+document.getElementById("lyrics").innerHTML=lines.join("<br>");
+
+}
+
+function scriptIdea(){
+
+let scripts=[
+"A struggling musician discovers AI that predicts hit songs.",
+"A village boy becomes a global music icon.",
+"A future where music controls emotions.",
+"A band trying to save their city through music."
+];
+
+document.getElementById("script").innerHTML=
+scripts[Math.floor(Math.random()*scripts.length)];
+
+}
+
+function chords(){
+
+let chords=[
+"C - G - Am - F",
+"D - A - Bm - G",
+"G - D - Em - C",
+"Am - F - C - G"
+];
+
+document.getElementById("chord").innerHTML=
+chords[Math.floor(Math.random()*chords.length)];
 
 }
 
