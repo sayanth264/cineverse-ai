@@ -14,14 +14,14 @@
 <script>
 
 if(!localStorage.getItem("loggedin")){
-window.location.href="login.html";
+window.location.href="login.html"
 }
 
 </script>
 
 <header>
 
-<h1>🎬 CineVerse AI Studio</h1>
+<h1>CineVerse Studio</h1>
 
 <button onclick="logout()">Logout</button>
 
@@ -31,7 +31,7 @@ window.location.href="login.html";
 
 <div class="card">
 
-<h3>💡 Song Idea Generator</h3>
+<h3>Song Idea Generator</h3>
 
 <button onclick="idea()">Generate</button>
 
@@ -41,7 +41,7 @@ window.location.href="login.html";
 
 <div class="card">
 
-<h3>✍️ Lyrics Generator</h3>
+<h3>Lyrics Generator</h3>
 
 <button onclick="lyrics()">Generate</button>
 
@@ -51,9 +51,10 @@ window.location.href="login.html";
 
 <div class="card">
 
-<h3>🎤 Voice Recorder</h3>
+<h3>Voice Recorder</h3>
 
 <button onclick="startRec()">Start</button>
+
 <button onclick="stopRec()">Stop</button>
 
 <p id="recstatus"></p>
@@ -64,7 +65,7 @@ window.location.href="login.html";
 
 <div class="card">
 
-<h3>🎬 Script Generator</h3>
+<h3>Movie Script Idea</h3>
 
 <button onclick="scriptIdea()">Generate</button>
 
@@ -74,7 +75,7 @@ window.location.href="login.html";
 
 <div class="card">
 
-<h3>🎵 Chord Generator</h3>
+<h3>Chord Generator</h3>
 
 <button onclick="chords()">Generate</button>
 
@@ -90,9 +91,9 @@ window.location.href="login.html";
 
 function logout(){
 
-localStorage.removeItem("loggedin");
+localStorage.removeItem("loggedin")
 
-window.location.href="login.html";
+window.location.href="login.html"
 
 }
 
@@ -100,19 +101,19 @@ function idea(){
 
 let ideas=[
 "Romantic rain love song",
-"Hero intro movie music",
-"Lo-fi night music",
+"Hero intro music",
+"Lo-fi study music",
 "Sad piano melody",
 "Festival dance beat",
 "Workout motivation song",
-"Village folk music",
+"Village folk song",
 "Sci-fi movie soundtrack",
-"Travel vlog background music",
+"Travel vlog music",
 "Friendship celebration song"
-];
+]
 
 document.getElementById("idea").innerHTML=
-ideas[Math.floor(Math.random()*ideas.length)];
+ideas[Math.floor(Math.random()*ideas.length)]
 
 }
 
@@ -124,14 +125,14 @@ let lines=[
 "Dreams dancing in the sky",
 "A melody born from the heart",
 "Stars listening to our song",
-"The rhythm flowing like a river",
+"The rhythm flows like a river",
 "Every note tells a story",
 "Music carries our emotions",
 "Together we create magic",
 "And the song lives forever"
-];
+]
 
-document.getElementById("lyrics").innerHTML=lines.join("<br>");
+document.getElementById("lyrics").innerHTML=lines.join("<br>")
 
 }
 
@@ -141,11 +142,11 @@ let scripts=[
 "A struggling musician discovers AI that predicts hit songs.",
 "A village boy becomes a global music icon.",
 "A future where music controls emotions.",
-"A band trying to save their city through music."
-];
+"A band saving their city through music."
+]
 
 document.getElementById("script").innerHTML=
-scripts[Math.floor(Math.random()*scripts.length)];
+scripts[Math.floor(Math.random()*scripts.length)]
 
 }
 
@@ -156,10 +157,10 @@ let chords=[
 "D - A - Bm - G",
 "G - D - Em - C",
 "Am - F - C - G"
-];
+]
 
 document.getElementById("chord").innerHTML=
-chords[Math.floor(Math.random()*chords.length)];
+chords[Math.floor(Math.random()*chords.length)]
 
 }
 
