@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:Segoe UI;
-background:#ECECEC;
+background:#6D756F;
 color:#36454F; /* charcoal text */
 text-align:center;
 }
@@ -13,7 +13,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
-background:#ffffff;
+background:#CDD6D0;
 border-bottom:2px solid #f0f0f0;
 }
 
