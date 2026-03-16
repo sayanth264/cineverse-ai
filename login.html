@@ -39,6 +39,26 @@ localStorage.setItem(username,password);
 document.getElementById("msg").innerHTML="Account created!";
 
 }
+  function login(){
+
+let username=document.getElementById("username").value;
+let password=document.getElementById("password").value;
+
+let storedPassword=localStorage.getItem(username);
+
+if(storedPassword===password){
+
+localStorage.setItem("loggedin","true");
+
+window.location.href="dashboard.html";
+
+}
+else{
+
+document.getElementById("msg").innerHTML="Invalid login";
+
+}
+    
 
 </script>
 
