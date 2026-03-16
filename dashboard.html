@@ -2,11 +2,8 @@
 <html>
 
 <head>
-
 <title>CineVerse Studio</title>
-
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -22,7 +19,6 @@ window.location.href="login.html"
 <header>
 
 <h1>CineVerse Studio</h1>
-
 <button onclick="logout()">Logout</button>
 
 </header>
@@ -30,56 +26,50 @@ window.location.href="login.html"
 <div class="features">
 
 <div class="card">
-
-<h3>Song Idea Generator</h3>
-
+<h3>💡 Song Idea</h3>
 <button onclick="idea()">Generate</button>
-
 <p id="idea"></p>
-
 </div>
 
 <div class="card">
-
-<h3>Lyrics Generator</h3>
-
+<h3>✍️ Lyrics Generator</h3>
 <button onclick="lyrics()">Generate</button>
-
 <p id="lyrics"></p>
-
 </div>
 
 <div class="card">
+<h3>🥁 AI Beat Generator</h3>
+<button onclick="beat()">Generate</button>
+<p id="beat"></p>
+</div>
 
-<h3>Voice Recorder</h3>
+<div class="card">
+<h3>🎼 Melody Idea</h3>
+<button onclick="melody()">Generate</button>
+<p id="melody"></p>
+</div>
+
+<div class="card">
+<h3>🎬 Film Story</h3>
+<button onclick="story()">Generate</button>
+<p id="story"></p>
+</div>
+
+<div class="card">
+<h3>🎵 Chord Generator</h3>
+<button onclick="chords()">Generate</button>
+<p id="chord"></p>
+</div>
+
+<div class="card">
+<h3>🎤 Voice Recorder</h3>
 
 <button onclick="startRec()">Start</button>
-
 <button onclick="stopRec()">Stop</button>
 
 <p id="recstatus"></p>
 
 <audio id="audioPlayback" controls></audio>
-
-</div>
-
-<div class="card">
-
-<h3>Movie Script Idea</h3>
-
-<button onclick="scriptIdea()">Generate</button>
-
-<p id="script"></p>
-
-</div>
-
-<div class="card">
-
-<h3>Chord Generator</h3>
-
-<button onclick="chords()">Generate</button>
-
-<p id="chord"></p>
 
 </div>
 
@@ -90,11 +80,8 @@ window.location.href="login.html"
 <script>
 
 function logout(){
-
 localStorage.removeItem("loggedin")
-
 window.location.href="login.html"
-
 }
 
 function idea(){
@@ -102,7 +89,7 @@ function idea(){
 let ideas=[
 "Romantic rain love song",
 "Hero intro music",
-"Lo-fi study music",
+"Lo-fi study beat",
 "Sad piano melody",
 "Festival dance beat",
 "Workout motivation song",
@@ -119,34 +106,95 @@ ideas[Math.floor(Math.random()*ideas.length)]
 
 function lyrics(){
 
-let lines=[
+let lyricsSet=[
+
+[
 "Under the silver moon we sing",
 "Your voice echoes through the night",
-"Dreams dancing in the sky",
+"Dreams dancing softly in the sky",
 "A melody born from the heart",
 "Stars listening to our song",
 "The rhythm flows like a river",
 "Every note tells a story",
-"Music carries our emotions",
+"Music carries emotions",
 "Together we create magic",
 "And the song lives forever"
+],
+
+[
+"Rain drops fall on broken dreams",
+"A lonely guitar starts to cry",
+"The night whispers silent stories",
+"Footsteps fading in the dark",
+"Memories dancing in shadows",
+"A voice searching for love",
+"Every chord holds a secret",
+"A melody of lost hope",
+"The moon listens quietly",
+"And the heart sings again"
+],
+
+[
+"The city lights begin to glow",
+"A rhythm rising in the streets",
+"Voices singing freedom songs",
+"Dreamers chasing neon skies",
+"A drum beating in the heart",
+"Every step becomes music",
+"The crowd becomes a choir",
+"A new sound is born tonight",
+"Hope rises like a sunrise",
+"And the world dances again"
 ]
 
-document.getElementById("lyrics").innerHTML=lines.join("<br>")
+]
+
+let selected=lyricsSet[Math.floor(Math.random()*lyricsSet.length)]
+
+document.getElementById("lyrics").innerHTML=selected.join("<br>")
 
 }
 
-function scriptIdea(){
+function beat(){
 
-let scripts=[
-"A struggling musician discovers AI that predicts hit songs.",
-"A village boy becomes a global music icon.",
-"A future where music controls emotions.",
-"A band saving their city through music."
+let beats=[
+"Boom Clap Boom Boom Clap (90 BPM Hip-Hop)",
+"Kick Snare Kick Kick Snare (Trap Beat)",
+"Boom Boom Clap Clap Boom (EDM Beat)",
+"Kick Kick Snare Kick Snare (Pop Beat)",
+"Boom Clap Clap Boom Clap (Lo-fi Beat)"
 ]
 
-document.getElementById("script").innerHTML=
-scripts[Math.floor(Math.random()*scripts.length)]
+document.getElementById("beat").innerHTML=
+beats[Math.floor(Math.random()*beats.length)]
+
+}
+
+function melody(){
+
+let melodies=[
+"C D E G E D C",
+"G A B D B A G",
+"A C D E D C A",
+"E G A B A G E"
+]
+
+document.getElementById("melody").innerHTML=
+melodies[Math.floor(Math.random()*melodies.length)]
+
+}
+
+function story(){
+
+let stories=[
+"A struggling musician discovers an AI that predicts hit songs.",
+"A village boy becomes a global music icon.",
+"A future where music controls emotions.",
+"A band saving their city through a final concert."
+]
+
+document.getElementById("story").innerHTML=
+stories[Math.floor(Math.random()*stories.length)]
 
 }
 
@@ -167,5 +215,4 @@ chords[Math.floor(Math.random()*chords.length)]
 </script>
 
 </body>
-
 </html>
