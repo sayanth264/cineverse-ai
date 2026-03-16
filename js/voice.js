@@ -1,41 +1,44 @@
-let mediaRecorder;
-let audioChunks=[];
+let mediaRecorder
+let audioChunks=[]
 
 function startRec(){
 
 navigator.mediaDevices.getUserMedia({audio:true})
+
 .then(stream=>{
 
-mediaRecorder=new MediaRecorder(stream);
+mediaRecorder=new MediaRecorder(stream)
 
-mediaRecorder.start();
+mediaRecorder.start()
 
-document.getElementById("recstatus").innerHTML="Recording...";
+document.getElementById("recstatus").innerHTML="Recording..."
 
 mediaRecorder.ondataavailable=e=>{
-audioChunks.push(e.data);
-};
+
+audioChunks.push(e.data)
+
+}
 
 mediaRecorder.onstop=e=>{
 
-let blob=new Blob(audioChunks,{type:"audio/mp3"});
+let blob=new Blob(audioChunks,{type:"audio/mp3"})
 
-let url=URL.createObjectURL(blob);
+let url=URL.createObjectURL(blob)
 
-document.getElementById("audioPlayback").src=url;
+document.getElementById("audioPlayback").src=url
 
-audioChunks=[];
+audioChunks=[]
 
-};
+}
 
-});
+})
 
 }
 
 function stopRec(){
 
-mediaRecorder.stop();
+mediaRecorder.stop()
 
-document.getElementById("recstatus").innerHTML="Recording stopped";
+document.getElementById("recstatus").innerHTML="Recording stopped"
 
 }
