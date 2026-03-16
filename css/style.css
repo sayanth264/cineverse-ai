@@ -1,8 +1,8 @@
 body{
 margin:0;
 font-family:Segoe UI;
-background:#F5F5F5; /* light ash */
-color:#36454F; /* charcoal */
+background:#FFFFFF; /* white background */
+color:#36454F; /* charcoal text */
 text-align:center;
 }
 
@@ -13,8 +13,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
-background:#E8E8E8; /* soft ash */
-border-bottom:2px solid #D6D6D6;
+background:#FFFFFF;
+border-bottom:3px solid #D6D6D6; /* ash border */
 }
 
 /* NAV */
@@ -35,6 +35,7 @@ color:#800020; /* burgundy */
 
 .hero{
 padding:120px 20px;
+border-bottom:2px solid #E8E8E8; /* light ash border */
 }
 
 /* MAIN BUTTON */
@@ -70,13 +71,13 @@ background:#FFFFFF;
 padding:25px;
 width:260px;
 border-radius:14px;
-border:1px solid #D6D6D6;
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
+border:2px solid #E8E8E8; /* ash border */
+box-shadow:0 5px 12px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .card:hover{
-background:#F0F0F0;
+border-color:#BFBFBF; /* deeper ash */
 transform:translateY(-5px);
 }
 
@@ -104,8 +105,8 @@ width:320px;
 padding:40px;
 margin:120px auto;
 border-radius:14px;
-border:1px solid #D6D6D6;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+border:2px solid #D6D6D6; /* ash border */
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* INPUT */
@@ -114,10 +115,9 @@ input{
 width:90%;
 padding:10px;
 margin:10px;
-border:1px solid #BFBFBF;
+border:2px solid #E8E8E8; /* ash border */
 border-radius:6px;
 color:#36454F;
-background:#FAFAFA;
 }
 
 /* AUDIO PLAYER */
