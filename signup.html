@@ -37,6 +37,25 @@ let password=document.getElementById("newpass").value;
 localStorage.setItem(username,password);
 
 document.getElementById("msg").innerHTML="Account created!";
+  <script>
+
+function signup(){
+
+let username=document.getElementById("newuser").value;
+let password=document.getElementById("newpass").value;
+
+if(username=="" || password==""){
+document.getElementById("msg").innerHTML="Please enter username and password";
+return;
+}
+
+localStorage.setItem(username,password);
+
+document.getElementById("msg").innerHTML="Account created! Redirecting to login...";
+
+setTimeout(function(){
+window.location.href="login.html";
+},1500);
 
 }
 
