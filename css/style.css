@@ -1,8 +1,8 @@
 body{
 margin:0;
 font-family:Segoe UI;
-background:#6D756F;
-color:#36454F; /* charcoal text */
+background:#F5F5F5; /* light ash */
+color:#36454F; /* charcoal */
 text-align:center;
 }
 
@@ -13,9 +13,11 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
-background:#CDD6D0;
-border-bottom:2px solid #f0f0f0;
+background:#E8E8E8; /* soft ash */
+border-bottom:2px solid #D6D6D6;
 }
+
+/* NAV */
 
 nav a{
 margin:10px;
@@ -35,9 +37,11 @@ color:#800020; /* burgundy */
 padding:120px 20px;
 }
 
+/* MAIN BUTTON */
+
 .mainbtn{
 padding:15px 35px;
-background:#800020; /* burgundy */
+background:#800020;
 border:none;
 border-radius:10px;
 color:white;
@@ -62,24 +66,25 @@ margin-top:40px;
 /* CARDS */
 
 .card{
-background:#ffffff;
+background:#FFFFFF;
 padding:25px;
 width:260px;
 border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border:1px solid #D6D6D6;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
 .card:hover{
+background:#F0F0F0;
 transform:translateY(-5px);
-box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
 /* BUTTONS */
 
 button{
 padding:10px 20px;
-background:#800020; /* burgundy */
+background:#800020;
 border:none;
 border-radius:8px;
 color:white;
@@ -94,12 +99,13 @@ background:#660018;
 /* LOGIN BOX */
 
 .loginbox{
-background:#ffffff;
+background:#FFFFFF;
 width:320px;
 padding:40px;
 margin:120px auto;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
+border:1px solid #D6D6D6;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* INPUT */
@@ -108,9 +114,10 @@ input{
 width:90%;
 padding:10px;
 margin:10px;
-border:1px solid #ddd;
+border:1px solid #BFBFBF;
 border-radius:6px;
 color:#36454F;
+background:#FAFAFA;
 }
 
 /* AUDIO PLAYER */
