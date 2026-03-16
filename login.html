@@ -1,15 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CineVerse AI Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="loginbox">
+
+<h2>Studio Login</h2>
+
+<input id="username" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="msg"></p>
+
+<p>New user? <a href="signup.html">Create account</a></p>
+
+</div>
+
 <script>
 
 function login(){
 
-let u=document.getElementById("username").value;
-let p=document.getElementById("password").value;
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
 
-let storedPass=localStorage.getItem(u);
+let storedPassword = localStorage.getItem(username);
 
-if(storedPass==p){
+if(storedPassword === password){
 
-window.location="index.html";
+window.location.href = "index.html";
 
 }
 else{
@@ -21,3 +47,7 @@ document.getElementById("msg").innerHTML="Invalid username or password";
 }
 
 </script>
+
+</body>
+
+</html>
