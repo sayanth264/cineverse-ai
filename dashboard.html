@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CineVerse AI Studio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🎬 CineVerse AI Studio</h1>
+
+</header>
+
+<div class="container">
+
+<h2>Welcome Creator 🚀</h2>
+
+<p>Use AI tools to create films and music.</p>
+
+<div class="card">
+
+<h3>🎼 Music Idea Generator</h3>
+
+<button onclick="idea()">Generate Idea</button>
+
+<p id="idea"></p>
+
+</div>
+
+<div class="card">
+
+<h3>✍️ Lyrics Generator</h3>
+
+<button onclick="lyrics()">Generate</button>
+
+<p id="lyrics"></p>
+
+</div>
+
+<div class="card">
+
+<h3>🎤 Voice Recorder</h3>
+
+<button onclick="startRec()">Start</button>
+<button onclick="stopRec()">Stop</button>
+
+<p id="recstatus"></p>
+
+<audio id="audioPlayback" controls></audio>
+
+</div>
+
+</div>
+
+<script src="js/voice.js"></script>
+
+<script>
+
+function idea(){
+
+let ideas=[
+"Romantic rain song",
+"Hero intro background music",
+"Sad piano theme",
+"Festival dance beat"
+];
+
+document.getElementById("idea").innerHTML =
+ideas[Math.floor(Math.random()*ideas.length)];
+
+}
+
+function lyrics(){
+
+let lines=[
+"Under the silver moon we sing",
+"Your voice echoes in my heart",
+"Dancing lights in midnight sky",
+"A melody that never fades"
+];
+
+document.getElementById("lyrics").innerHTML =
+lines[Math.floor(Math.random()*lines.length)];
+
+}
+
+</script>
+
+</body>
+
+</html>
