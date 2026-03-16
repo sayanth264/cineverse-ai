@@ -1,104 +1,81 @@
 body{
-
 margin:0;
 font-family:Segoe UI;
-background:#0b0b0f;
+background:linear-gradient(135deg,#0f172a,#020617);
 color:white;
 text-align:center;
-
 }
 
 header{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px;
-background:#111;
-
+background:#020617;
 }
 
 nav a{
-
 margin:10px;
-color:#ffd700;
+color:#8b5cf6;
 text-decoration:none;
 font-weight:bold;
-
 }
 
 .hero{
-
 padding:120px 20px;
-
 }
 
 .mainbtn{
-
-padding:15px 30px;
-background:#ffd700;
+padding:15px 35px;
+background:#8b5cf6;
 border:none;
-border-radius:8px;
-font-size:16px;
+border-radius:10px;
+color:white;
 cursor:pointer;
-
 }
 
 .features{
-
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:25px;
 margin-top:40px;
-
 }
 
 .card{
-
-background:#1a1a22;
+background:#1e293b;
 padding:25px;
 width:260px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(255,215,0,0.2);
-
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 button{
-
 padding:10px 20px;
-background:#ffd700;
+background:#8b5cf6;
 border:none;
-border-radius:6px;
+border-radius:8px;
+color:white;
 cursor:pointer;
-margin:5px;
-
 }
 
 .loginbox{
-
-background:#1a1a22;
+background:#1e293b;
 width:320px;
 padding:40px;
 margin:120px auto;
-border-radius:12px;
-box-shadow:0 0 15px rgba(255,215,0,0.3);
-
+border-radius:14px;
 }
 
 input{
-
 width:90%;
 padding:10px;
 margin:10px;
 border:none;
 border-radius:6px;
-
 }
 
 audio{
-
 width:150px;
 margin-top:10px;
-
 }
