@@ -16,7 +16,7 @@ margin:25px;
 border:10px solid #D6D6D6; /* ash border */
 border-radius:25px; /* curved border */
 min-height:95vh;
-box-sizing:border-box;
+box-sizing:curved-box;
 }
 
 /* HEADER */
