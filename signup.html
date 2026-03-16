@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Signup</title>
+<title>Create Account</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -23,7 +23,7 @@
 
 <p id="msg"></p>
 
-<p><a href="login.html">Back to Login</a></p>
+<p><a href="login.html">Already have account? Login</a></p>
 
 </div>
 
@@ -31,31 +31,17 @@
 
 function signup(){
 
-let username=document.getElementById("newuser").value;
-let password=document.getElementById("newpass").value;
-
-localStorage.setItem(username,password);
-
-document.getElementById("msg").innerHTML="Account created!";
-  <script>
-
-function signup(){
-
-let username=document.getElementById("newuser").value;
-let password=document.getElementById("newpass").value;
+let username=document.getElementById("newuser").value
+let password=document.getElementById("newpass").value
 
 if(username=="" || password==""){
-document.getElementById("msg").innerHTML="Please enter username and password";
-return;
+document.getElementById("msg").innerHTML="Enter username and password"
+return
 }
 
-localStorage.setItem(username,password);
+localStorage.setItem(username,password)
 
-document.getElementById("msg").innerHTML="Account created! Redirecting to login...";
-
-setTimeout(function(){
-window.location.href="login.html";
-},1500);
+document.getElementById("msg").innerHTML="Account created! Go to login"
 
 }
 
